@@ -1,4 +1,4 @@
-name: "gradle CI workflow"
+name: "gradle CI workflow windows"
 
 on:
   push:
