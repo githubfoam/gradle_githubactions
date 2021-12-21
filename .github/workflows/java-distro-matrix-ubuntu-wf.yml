@@ -11,7 +11,8 @@ jobs:
     name: "matrix jdk distribution on ubuntu-latest"
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest,windows-latest,macos-latest]
+        # os: [ubuntu-latest]
         distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]
         jdk: ['17']   
     runs-on: ${{ matrix.os }} 
