@@ -20,10 +20,13 @@ jobs:
       with:
         java-version: 1.8
         architecture: x64        
-    - name: "Grant execute permission for gradlew"
-      run: chmod +x gradlew
-    - name: "Build with Gradle"
-      run: ./gradlew build    
-    - name: "Run the Gradle package task"
-      run: ./gradlew -b ci.gradle package      
+    - name: "Grant execute permission for gradlew & build"
+      run: |
+        cd app5 && chmod +x gradlew
+        whoami
+        ls -lai gradlew
+        echo "#####################################################"
+        echo "######################## BUILD ########################"
+        echo "#####################################################"
+        ./gradlew clean build    
 
