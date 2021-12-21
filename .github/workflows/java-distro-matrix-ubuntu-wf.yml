@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        distro: [microsoft]
+        distro: [microsoft,temurin]
         jdk: ['17']   
     runs-on: ${{ matrix.os }} 
     steps:
