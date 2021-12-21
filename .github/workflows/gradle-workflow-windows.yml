@@ -22,9 +22,8 @@ jobs:
         architecture: x64
     - name: "Grant execute permission for gradlew & build"
       run: |
-        cd app5 && chmod +x gradlew
-        whoami
-        ls -lai gradlew
+        # cd app5 && chmod +x gradlew
+        cd app5
         echo "#####################################################"
         echo "######################## BUILD ########################"
         echo "#####################################################"

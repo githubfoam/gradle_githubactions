@@ -23,8 +23,6 @@ jobs:
     - name: "Grant execute permission for gradlew & build"
       run: |
         cd app5 && chmod +x gradlew
-        whoami
-        ls -lai gradlew
         echo "#####################################################"
         echo "######################## BUILD ########################"
         echo "#####################################################"
