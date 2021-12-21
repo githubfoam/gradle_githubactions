@@ -30,7 +30,11 @@ jobs:
     #   run: mvn -B package --file pom.xml
     - name: "Grant execute permission for gradlew"
       # run: chmod +x gradlew
-      run: cd app5 && chmod +x gradlew
+      run: |
+        cd app5 && chmod +x gradlew
+        whoami
+        ls -lai gradlew
+        ./gradlew clean build 
     - name: "Build with Gradle"
       # run: ./gradlew build    
       run: ./gradlew clean build  
