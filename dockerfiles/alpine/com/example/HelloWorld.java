@@ -1,4 +1,4 @@
-package com.example;
+package dockerfiles.alpine.com.example;
 
 public class HelloWorld {
     public static void main(String[] args) {

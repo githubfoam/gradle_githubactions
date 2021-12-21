@@ -20,7 +20,7 @@ jobs:
     - name: "compile"    
       run: |
         javac Sum.java
-        java -cp java Sum
-    - name: "compile"    
+        java -cp . Sum
+    - name: "run"    
       run: java -cp java Sum
        
