@@ -18,7 +18,9 @@ jobs:
         distribution: 'temurin' # See 'Supported distributions' for available options
         java-version: '17'
     - name: "compile"    
-      run: javac Sum.java
+      run: |
+        javac Sum.java
+        java -cp java Sum
     - name: "compile"    
       run: java -cp java Sum
        
