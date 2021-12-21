@@ -1,0 +1,24 @@
+name: "java distro ubuntu CI workflow"
+
+on:
+  push:
+    branches: [ dev ]
+
+
+jobs:
+  
+# https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-java-with-gradle  
+  build-linux-job:
+    name: "Eclipse Temurin on ubuntu-latest"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin' # See 'Supported distributions' for available options
+        java-version: '17'
+    - name: "compile"    
+      run: javac Sum.java
+    - name: "compile"    
+      run: java -cp java Sum
+       
