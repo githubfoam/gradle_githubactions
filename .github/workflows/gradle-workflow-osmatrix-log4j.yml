@@ -44,7 +44,7 @@ jobs:
           cd hotpatch-for-apache-log4j2
           # build on linux, mac and Windows subsystem for linux
           ./gradlew build
-          find / -name Log4jHotPatch.jar
+          sudo find / -name Log4jHotPatch.jar
 
   # build-gradle-windows-log4j:
   #   name: "log4j RCE from CVE-2021-44228"
