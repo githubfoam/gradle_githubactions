@@ -16,12 +16,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        distro: [microsoft]       
-        jdk: [11]      
-        # os: [ubuntu-latest, macos-latest]
-        # distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
-        # jdk: [ 8,11,16,17]
+        # os: [ubuntu-latest]
+        # distro: [microsoft]       
+        # jdk: [11]      
+        os: [ubuntu-latest, macos-latest]
+        distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
+        jdk: [ 8,11,16,17]
         jdk-arch: [x64]
     steps:
       - uses: actions/checkout@v2
@@ -44,13 +44,13 @@ jobs:
           cd hotpatch-for-apache-log4j2
           # build on linux, mac and Windows subsystem for linux
           ./gradlew build
-      - name: "Run JDK 8 tests - Testing the agent"
-        run: |          
-          sudo find / -name Log4jHotPatch.jar
-          ls -lai /usr/lib/jvm/
-          cd hotpatch-for-apache-log4j2
-          ls -lai .
-          ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
+      # - name: "Run JDK 8 tests - Testing the agent"
+      #   run: |          
+      #     sudo find / -name Log4jHotPatch.jar
+      #     ls -lai /usr/lib/jvm/
+      #     cd hotpatch-for-apache-log4j2
+      #     ls -lai .
+      #     ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
       # - name: "Run JDK 11 tests - Testing the agent"
       #   run: |          
       #     # sudo find / -name Log4jHotPatch.jar
