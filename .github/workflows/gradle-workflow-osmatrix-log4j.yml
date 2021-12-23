@@ -48,8 +48,9 @@ jobs:
         run: |          
           sudo find / -name Log4jHotPatch.jar
           ls -lai /usr/lib/jvm/
+          cd hotpatch-for-apache-log4j2
           ls -lai .
-          # ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
+          ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
       # - name: "Run JDK 11 tests - Testing the agent"
       #   run: |          
       #     # sudo find / -name Log4jHotPatch.jar
