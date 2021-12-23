@@ -16,9 +16,12 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
-        distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
-        jdk: [ 8,11,16,17]
+        os: [ubuntu-latest]
+        distro: [microsoft]       
+        jdk: [11]      
+        # os: [ubuntu-latest, macos-latest]
+        # distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
+        # jdk: [ 8,11,16,17]
         jdk-arch: [x64]
     steps:
       - uses: actions/checkout@v2
@@ -50,7 +53,7 @@ jobs:
   #     matrix:
   #       os: [windows-latest]
   #       distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
-  #       java: [ 8,11,16,17]
+  #       jdk: [ 8,11,16,17]
   #       jdk-arch: [x64]
   #   steps:
   #     - uses: actions/checkout@v2
@@ -58,7 +61,7 @@ jobs:
   #       uses: actions/setup-java@v1
   #       with:
   #         distribution: ${{ matrix.distro}}  # See 'Supported distributions' for available options
-  #         java-version: ${{ matrix.java }
+  #         java-version: ${{ matrix.jdk }
   #         architecture: ${{ matrix.jdk-arch }}  #x86 # optional - defaults to x64
   #     - name: "Verify java version"
   #       run: java -version 
