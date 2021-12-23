@@ -45,6 +45,8 @@ jobs:
           # build on linux, mac and Windows subsystem for linux
           ./gradlew build
           sudo find / -name Log4jHotPatch.jar
+          ls /usr/lib/jvm/
+          # ./build-tools/bin/run_tests.sh $GITHUB_WORKSPACE/build/libs/Log4jHotPatch.jar /usr/lib/jvm/
 
   # build-gradle-windows-log4j:
   #   name: "log4j RCE from CVE-2021-44228"
