@@ -47,14 +47,15 @@ jobs:
       - name: "Run JDK 8 tests - Testing the agent"
         run: |          
           sudo find / -name Log4jHotPatch.jar
-          ls /usr/lib/jvm/
-          ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
-      - name: "Run JDK 11 tests - Testing the agent"
-        run: |          
-          # sudo find / -name Log4jHotPatch.jar
-          # /home/runner/work/gradle_githubactions/gradle_githubactions/hotpatch-for-apache-log4j2/build/libs/Log4jHotPatch.jar
-          ls /usr/lib/jvm/
-          ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-11-hotspot-amd64
+          ls -lai /usr/lib/jvm/
+          ls -lai .
+          # ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
+      # - name: "Run JDK 11 tests - Testing the agent"
+      #   run: |          
+      #     # sudo find / -name Log4jHotPatch.jar
+      #     # /home/runner/work/gradle_githubactions/gradle_githubactions/hotpatch-for-apache-log4j2/build/libs/Log4jHotPatch.jar
+      #     ls /usr/lib/jvm/
+      #     ./build-tools/bin/run_tests.sh /build/libs/Log4jHotPatch.jar /usr/lib/jvm/adoptopenjdk-11-hotspot-amd64
 
 
   # build-gradle-windows-log4j:
