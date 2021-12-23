@@ -42,7 +42,7 @@ jobs:
           echo "#####################################################"
           git clone https://github.com/corretto/hotpatch-for-apache-log4j2.git
           # cd hotpatch-for-apache-log4j2
-          cd $GITHUB_WORKSPACE
+          ls $GITHUB_WORKSPACE
           # build on linux, mac and Windows subsystem for linux
           ./gradlew build
 
