@@ -16,11 +16,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        # os: [ubuntu-latest]
-        # distro: [microsoft]       
-        # jdk: [11]      
         os: [ubuntu-latest, macos-latest]
-        distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
+        distro: [microsoft]  
+        # distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
         jdk: [ 8,11,16,17]
         jdk-arch: [x64]
     steps:
