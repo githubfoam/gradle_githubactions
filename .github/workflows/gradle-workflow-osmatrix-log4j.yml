@@ -18,7 +18,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
         distro: [microsoft]  
-        # distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
+        distro: [microsoft,temurin,zulu,adopt-hotspot,adopt-openj9,liberica]       
         jdk: ['17']
         # jdk: ['8','11','16','17']
         jdk-arch: [x64]
