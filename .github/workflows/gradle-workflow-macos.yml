@@ -51,4 +51,10 @@ jobs:
         run: java -version 
       - name: "Verify gradle version"
         run: gradle -v    
-
+      # - name: "Grant execute permission for gradlew & build"
+      #   run: |
+      #     cd app5 && chmod +x gradlew
+      #     echo "#####################################################"
+      #     echo "######################## BUILD ########################"
+      #     echo "#####################################################"
+      #     ./gradlew clean build  
